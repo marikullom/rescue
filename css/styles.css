@@ -1,6 +1,6 @@
 /*
-Author: Vic Gauthreaux
-Date: 01/01/2020
+Author: Mari Ullom
+Date: January 22, 2022
 File Name: styles.css
 */
 
@@ -199,11 +199,6 @@ footer a {
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px), print {
     
-    /* Desktop Viewport: Style rules for nav area */
-    nav li {
-        font-size: 1.5em;
-    }
-    
     nav li a {
         padding: 0.5em 1.5em;
     }
@@ -227,6 +222,43 @@ footer a {
     aside {
         grid-column: 1 / span 3;
         font-size: 2em;
+    }
+    /* Desktop Viewport: Show desktop class, hide-tablet class */
+    
+    /* Style rules for table */
+    table {
+        border: 1px solid #2a1f14;
+        border-collapse: collapse;
+        margin: zero auto zero auto;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+
+    th, td {
+        border: 1px solid #2a1f14;
+        padding: 1%;
+    }
+
+    th {
+        background-color: #2a1f14;
+        color: white;
+        font-size: 1.15em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #deccba;
+    }
+
+    .mobile-tablet {
+        display: none;
+    }
+    /* Desktop Viewport: Style rules for nav area */
+    nav li {
+        font-size: 1.5em;
     }
     
 }
@@ -257,6 +289,9 @@ footer a {
     }
     
 }
+
+/* Style rules for table */
+
 
 /* Media Query for Print */
 @media print {
