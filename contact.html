@@ -54,6 +54,62 @@
 
             </div>
 
+            <div id="form">
+                <h2>Complete the form below and we will contact you soon.</h2>
+
+                <form class="form-grid">
+                    <!-- Start Form-->
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="fName">First Name:</label>
+                        <input type="text" name="fName" id="fName">
+
+                        <label for="lName">Last Name:</label>
+                        <input type="text" name="lName" id="lName">
+
+                        <label for="bName">Name of Business:</label>
+                        <input type="text" name="bName" id="bName">Name
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        <p>I would like more information about:</p>
+
+                        <label for="vol">
+                            <input type="radio" name="info" id="vol" value="Volunteering">
+                            Volunteering
+                        </label>
+
+                        <label for="sponsor">
+                            <input type="radio" name="info" id="sponsor" value="Sponsorship Opportunities">
+                            Sponsorship opportunities
+                        </label>
+
+                        <label for="wild">
+                            <input type="radio" name="info" id="wild" value="Wildlife">
+                            Wildlife
+                        </label>
+
+                        <label for="other">
+                            <input type="radio" name="info" id="other" value="Other">
+                            Other, please specify below.
+                        </label>
+
+                        <label for="questions">What questions do you have for us?</label>
+
+                        <textarea name="questions" id="questions" rows="5" cols="35"></textarea>
+                    </fieldset>
+
+                    <input type="submit" id="submit" value="Submit" class="btn">
+                </form>
+            </div>
+
         </main>
 
         <footer>

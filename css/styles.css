@@ -1,6 +1,6 @@
 /*
 Author: Mari Ullom
-Date: January 22, 2022
+Date: 01/22/2022
 File Name: styles.css
 */
 
@@ -24,11 +24,11 @@ img {
 /* Style rules for mobile viewport */
 
 /* Style rule show mobile class and hide tab-desk class */
-.mobile {
+.mobile, .mobile-tablet {
     display: block;
 }
 
-.tab-desk {
+.tab-desk, .desktop {
     display: none;
 }
 
@@ -130,9 +130,11 @@ figcaption {
     margin-left: 10%;
 }
 
-#contact {
+#contact, #form h2 {
     text-align: center;
 }
+
+
 
 .tel-link {
     background-color: #2a1f14;
@@ -145,6 +147,31 @@ figcaption {
     color: #f6eee4;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Style rules for form elements */
+fieldset, input, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+#submit {
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
 }
 
 /* Style rules for footer content */
@@ -193,11 +220,33 @@ footer a {
     aside {
         grid-column: 1 / span 2;
     }
+
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 70%;
+        margin: auto auto;
+    }
+
+    .
+
     
 }
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px), print {
+    
+    /* Desktop Viewport: Show Desktop class, hide mobile-tablet class */
+    .desktop {
+
+    }
+
+    .mobile-tablet {
+        display: none;
+    }
+    /* Desktop Viewport: Style rules for nav area */
+    nav li {
+        font-size: 1.5em;
+    }
     
     nav li a {
         padding: 0.5em 1.5em;
@@ -223,13 +272,12 @@ footer a {
         grid-column: 1 / span 3;
         font-size: 2em;
     }
-    /* Desktop Viewport: Show desktop class, hide-tablet class */
-    
-    /* Style rules for table */
+
     table {
         border: 1px solid #2a1f14;
+        padding: 1%;
         border-collapse: collapse;
-        margin: zero auto zero auto;
+        margin: 0 auto;
     }
 
     caption {
@@ -245,20 +293,12 @@ footer a {
 
     th {
         background-color: #2a1f14;
-        color: white;
+        color: #fff;
         font-size: 1.15em;
     }
 
     tr:nth-child(odd) {
         background-color: #deccba;
-    }
-
-    .mobile-tablet {
-        display: none;
-    }
-    /* Desktop Viewport: Style rules for nav area */
-    nav li {
-        font-size: 1.5em;
     }
     
 }
@@ -289,9 +329,6 @@ footer a {
     }
     
 }
-
-/* Style rules for table */
-
 
 /* Media Query for Print */
 @media print {
