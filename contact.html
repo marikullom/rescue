@@ -55,10 +55,11 @@
             </div>
 
             <div id="form">
+
                 <h2>Complete the form below and we will contact you soon.</h2>
 
-                <form class="form-grid">
-                    <!-- Start Form-->
+                <form class="form-grid"><!-- Start Form-->
+                    
                     <fieldset>
                         <legend>Contact Information</legend>
                         <label for="fName">First Name:</label>
@@ -81,33 +82,22 @@
                         <legend>Additional Information</legend>
                         <p>I would like more information about:</p>
 
-                        <label for="vol">
-                            <input type="radio" name="info" id="vol" value="Volunteering">
-                            Volunteering
-                        </label>
+                        <label for="vol"><input type="radio" name="info" id="vol" value="Volunteering">Volunteering</label>
+                    
+                        <label for="sponsor"><input type="radio" name="info" id="sponsor" value="Sponsorship Opportunities">Sponsorship opportunities</label>
+                
+                        <label for="wild"><input type="radio" name="info" id="wild" value="Wildlife">Wildlife</label>
 
-                        <label for="sponsor">
-                            <input type="radio" name="info" id="sponsor" value="Sponsorship Opportunities">
-                            Sponsorship opportunities
-                        </label>
-
-                        <label for="wild">
-                            <input type="radio" name="info" id="wild" value="Wildlife">
-                            Wildlife
-                        </label>
-
-                        <label for="other">
-                            <input type="radio" name="info" id="other" value="Other">
-                            Other, please specify below.
-                        </label>
+                        <label for="other"><input type="radio" name="info" id="other" value="Other">Other, please specify below.</label>
 
                         <label for="questions">What questions do you have for us?</label>
-
                         <textarea name="questions" id="questions" rows="5" cols="35"></textarea>
                     </fieldset>
 
                     <input type="submit" id="submit" value="Submit" class="btn">
+                
                 </form>
+                
             </div>
 
         </main>
