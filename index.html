@@ -4,22 +4,28 @@
 	File Name: index.html
 	Today's Date: January 22, 2022
  -->
- <html lang="en">
+ <!DOCTYPE html>
+<!-- 
+	Student Name: Vic Gauthreaux
+	File Name: index.html
+	Today's Date: 01/01/2020
+ -->
+<html lang="en">
 <head>
-    <title>Wild Rescues: Home</title>
-    <meta charset="utf-8">
+	<title>Wild Rescues: Home</title>
+	<meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Emblema+One|Lora&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+	<link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
 </head>
 <body>
     
     <div id="wrapper">
-
+        
         <!-- Mobile Nav -->
         <nav class="mobile-nav">
             <div id="nav-links">
@@ -27,17 +33,17 @@
                 <a href="about.html">About Us</a>
                 <a href="partnership.html">Partnership</a>
                 <a href="gallery.html">Gallery</a>
-                <a href="faqs.html">FAQ</a>
+                <a href="faqs.html">FAQs</a>
                 <a href="contact.html">Contact Us</a>
             </div>
-            <a href="nav-icon" onclick="hamburger()">
+            <a class="nav-icon" onclick="menu()">
                 <div id="icon">&#9776;</div>
             </a>
-        </nav> 
+		</nav> 
 
         <header>
             <div class="tab-desk">
-                <a href="index.html"><img src="images/baby-hawk.jpg" alt="rescued baby hawk"></a>
+              <a href="index.html"><img src="images/baby-hawk.jpg" alt="rescued baby hawk"></a>
             </div>
             <div class="mobile">
                 <h1>&#128062; Wild Rescues</h1>
@@ -45,7 +51,7 @@
             </div>
         </header>
 
-        <nav>
+        <nav class="tab-desk">
             <ul>
                 <li><a href="index.html">Home</a></li>  
                 <li><a href="about.html">About Us</a></li> 
@@ -78,13 +84,13 @@
             </div>
 
         </main>
-    
+
         <footer>
             <p>&copy; Copyright 2021. All Rights Reserved.</p>
             <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
         </footer>
-            
+
     </div>
-        
+	<script src="scripts/script.js"></script>
 </body>
 </html>
