@@ -4,24 +4,27 @@ Date: 01/22/2022
 File Name: styles.css
 */
 
-/*Css Reset*/
-body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption {
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, video {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-/*Style rules for body and images*/
+/* Style rules for body and images */
 body {
     background-color: #f6eee4;
 }
 
-img {
+img, video {
+    max-width: 100%;
     display: block;
-    max-width:100%;
 }
 
-/*Style rules to show mobile class and hide tab-desk class*/
+/* Style rules for mobile viewport */
+
+/* Style rule show mobile class and hide tab-desk class */
 .mobile, .mobile-tablet {
     display: block;
 }
@@ -30,20 +33,21 @@ img {
     display: none;
 }
 
-/*Style rules for header area*/
-.mobile h1 {
+/* Style rules for header area */
+.mobile h1, .mobile h3 {
     padding: 2%;
     text-align: center;
+}
+
+.mobile h1 {
     font-family: 'Emblema One', cursive;
 }
 
 .mobile h3 {
-    padding: 2%;
-    text-align: center;
     font-family: 'Lora', serif;
 }
 
-/*Style rules for navigation area*/
+/* Style rules for navigation area */
 nav {
     background-color: #2a1f14;
 }
@@ -55,27 +59,22 @@ nav ul {
 
 nav li {
     display: block;
-    border-top: 0.5px ;
-    color: #f6eee4;
     font-size: 1.5em;
-    font-family: Geneva, arial, sans-serif;
+    font-family: Geneva, Arial, sans-serif;
     font-weight: bold;
+    border-top: 0.5px solid #f6eee4;
 }
 
 nav li a {
     display: block;
     color: #f6eee4;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 0.5em 2em;
     text-decoration: none;
 }
 
-/*Style Rules for main content*/
+/* Style rules for main content */
 main {
     padding: 2%;
-    font-family: Verdana, Arial, sans-serif;
     font-family: 'Lora', serif;
 }
 
@@ -136,13 +135,10 @@ figcaption {
 }
 
 .tel-link {
-    background-color:#2a1f14;
+    background-color: #2a1f14;
     padding: 2%;
     width: 80%;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 .tel-link a {
@@ -152,7 +148,7 @@ figcaption {
 }
 
 /* Style rules for form elements */
-fieldset, input, textarea {
+fieldset, input, textarea  { 
     margin-bottom: 2%;
 }
 
@@ -171,31 +167,29 @@ form #submit {
     display: block;
     padding: 2%;
     background-color: #78593a;
-    color: f6eee4;
+    color: #f6eee4;
     font-size: 1.25em;
     border-radius: 10px;
 }
 
-/*Style rules for footer content*/
+/* Style rules for footer content */
 footer {
     text-align: center;
     font-size: 0.85em;
     background-color: #2a1f14;
     color: #f6eee4;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-right: 0%;
-    padding-left: 0%;
+    padding: 1% 0;
 }
 
 footer a {
-    color: #f3e6d8;
+    color: #f6eee4;
     text-decoration: none;
 }
 
-/*Media Query for Tablet Viewport*/
+/* Media Query for Tablet Viewport */
 @media screen and (min-width: 620px), print {
-    /*Tablet Viewport: Show tab-desk class, hide mobile class*/
+ 
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
     .tab-desk {
         display: block;
     }
@@ -203,78 +197,78 @@ footer a {
     .mobile {
         display: none;
     }
-
-    /*Tablet Viewport: Style rules for nav area*/
+    
+    /* Tablet Viewport: Style rules for nav area */
     nav li {
         border-top: none;
         display: inline-block;
         font-size: 1.25em;
     }
-
+    
     nav li a {
         padding: 0.5em;
     }
-
-    /*Tablet Viewport: Style rules for grids*/
+    
     .grid {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: auto auto;
         grid-gap: 10px;
     }
-
+    
     aside {
-        grid-column: 1/span 2;
+        grid-column: 1 / span 2;
     }
-
-    /* Tablet Viewport: Style rule for form elements */
-
+    
+    /* Tablet Viewport: Style rule for form element */
     form {
         width: 70%;
         margin: 0 auto;
     }
+    
 }
 
-/*Media Query for Desktop Viewport*/
+/* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px), print {
-    /*Desktop Viewport: Show desktop class, hide mobile-tablet class */
+    
+    /* Desktop Viewport: Show desktop class, hide mobile-tablet class */
     .desktop {
         display: block;
     }
-
+    
     .mobile-tablet {
         display: none;
     }
     
+    /* Desktop Viewport: Style rules for nav area */
     nav li {
         font-size: 1.5em;
     }
-
+    
     nav li a {
-        padding: 0.5em 1.5em 0.5em 1.5em;
+        padding: 0.5em 1.5em;
     }
-
+    
     nav li a:hover {
         color: #2a1f14;
         background-color: #f6eee4;
         opacity: 0.5;
     }
-
-    /*Desktop Viewport: Style rules for main content*/
+    
+    /* Desktop Viewport: Style rules for main content */
     #info ul {
         margin-left: 5%;
     }
-
-    /*Desktop Viewport: Style rules for grids*/
+    
     .grid {
-        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: auto auto auto;
         grid-gap: 30px;
     }
-
+    
     aside {
-        grid-column: 1/span 3;
-        font-size: 3em;
+        grid-column: 1 / span 3;
+        font-size: 2em;
     }
-
+    
     /* Style rules for table */
     table {
         border: 1px solid #2a1f14;
@@ -302,53 +296,59 @@ footer a {
     tr:nth-child(odd) {
         background-color: #deccba;
     }
-
+    
     /* Desktop Viewport: Style rules for form elements */
     form {
         width: auto;
-        
     }
-
+    
     .form-grid {
         display: grid;
         grid-template-columns: auto auto;
-        grid-gap: 20px;
+        grid-gap: 20px; 
     }
-
+    
     .btn {
         grid-column: 1 / span 2;
     }
+    
 }
-/*Media Query for Large Desktop Viewports*/
-@media screen and (min-width: 1921px) {
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px), print {
+    
     body {
         background: linear-gradient(#f6eee4, #78593a);
     }
+    
     #wrapper {
         width: 1920px;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
+        
     main {
         background-color: #f6eee4;
     }
-    /*Large Desktop Viewport: Style rules for grids*/
+    
     .grid {
-        grid-template-columns: 32px 25% 25% 25% 25%;
+        grid-template-columns: auto auto auto auto;
     }
+    
     aside {
-        grid-column: 1/span 4;
+        grid-column: 1 / span 4;
         font-size: 3em;
     }
+    
 }
 
+/* Media Query for Print */
 @media print {
-
+    
     body {
         background-color: #fff;
         color: #000;
     }
-
+    
 }
+
+    
